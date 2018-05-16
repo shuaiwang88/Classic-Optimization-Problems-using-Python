@@ -1,0 +1,52 @@
+\documentclass{minimal}
+\begin{document}
+\section{Stable marriage problem}\label{stable-marriage-problem}
+
+The stable marriage problem is the problem of finding a stable matching
+between two \textbf{equally} sized sets of elements given an ordering of
+preferences for each element.
+
+The SMP has been stated as follows:
+
+\begin{verbatim}
+Given n men and n women, where each person has ranked all men in the order of
+preferences, marry the men and women together such that there are no two
+people of opposite sex who both rather have each other then their current
+partners. When there are no such pairs of people, the set of marriages is
+deemed stable.  
+\end{verbatim}
+
+\subsection{Applications include:}\label{applications-include}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  assign graduating medical students to first hospital appointments.
+\end{enumerate}
+
+\subsection{The Gale-Shapley algorithm (2012 Nobel Prize in
+Economics)}\label{the-gale-shapley-algorithm-2012-nobel-prize-in-economics}
+
+Initialize all m \epsilon  M and w \epsilon  W to free
+
+\begin{verbatim}
+While \exists free man m who still has a women w to propose to {
+    
+    w = first women on m's list to whom m has not yet proposed
+
+    if w is free:
+        (m,w) become engaged
+
+        else some pair (m' , w) already exitsts
+
+            if w prefers m to m'
+
+            (m,w) become engaged
+                else 
+                (m', w) remain egaged
+
+} 
+\end{verbatim}
+
+\end{document}
